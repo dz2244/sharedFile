@@ -2,6 +2,8 @@ package com.example.sharedfile;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,5 +76,12 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("name", name);
         editor.commit();
         finish();
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem menu) {
+
     }
 }
